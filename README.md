@@ -47,7 +47,7 @@ To run the script, simply execute command: `python sk-entra-id.py`
 
 
 ## 🗎 The output.json file
-The script will outout a file on working directory called output.json. 
+The script will outout a file on working directory called `output.json`. 
 
 Here is an example: 
 
