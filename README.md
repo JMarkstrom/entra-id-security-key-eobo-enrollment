@@ -84,7 +84,7 @@ Possible improvements includes:
 - ~~Handle missing Serial Number (on 'Security Key Series' YubiKey)~~
 - Extend an existing output file and handle duplicates
 - Offer choice of JSON _or_ CSV as output file format
-- Select programming by security group as an alternative to UPN
+- Optional programming by security group
 
 ## 🥷🏻 Contributing
 Any help on the above (see 'roadmap) is welcome.
