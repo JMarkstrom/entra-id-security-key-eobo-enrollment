@@ -83,8 +83,8 @@ Possible improvements includes:
 - ~~Enable "Secure Transport Mode" (restricted NFC) on supported YubiKeys~~
 - ~~Handle missing Serial Number (on 'Security Key Series' YubiKey)~~
 - Extend an existing output file and handle duplicates
-- Offer choice of JSON _or_ CSV as output file format
-- Optional programming by security group
+- Offer choice of `.json` _or_ `.csv` as output file format
+- Optional programming by security group membership
 
 ## 🥷🏻 Contributing
 Any help on the above (see 'roadmap) is welcome.
