@@ -16,7 +16,7 @@
 # USAGE: python sk-entra-id.py
 #
 # BSD 2-Clause License                                                             
-# Copyright (c) 2024, Jonas Markström 
+# Copyright (c) 2024, swjm.blog
 # Copyright (c) 2024, Yubico AB
 #
 #   Redistribution and use in source and binary forms, with or
