@@ -68,5 +68,5 @@ _Download script and supporting configuration items:_
 4. Save the file and prepare to run the script.
    
 
-[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/) 
+[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
 
