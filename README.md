@@ -35,10 +35,8 @@ _The following are prerequisites towards running the script:_
 - [Python-fido2](https://github.com/Yubico/python-fido2) installed on client
 - [Yubikey Manager](https://github.com/Yubico/yubikey-manager) (CLI) installed on client. 
 
-**NOTE**: The installation and configuration of these items are _detailed_ in the next section.
-
-## ⚙️ Installation & Configuration
-
+## 💾 Setup intructions
+To install dependencies and configure your Entra ID tenant please see [these](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main/docs) instructions.
 
 ## 📖 Usage
 To run the script, simply execute command: `python sk-entra-id.py`
