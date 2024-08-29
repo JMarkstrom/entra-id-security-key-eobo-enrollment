@@ -35,7 +35,9 @@ _The following are prerequisites towards running the script:_
 - [Python-fido2](https://github.com/Yubico/python-fido2) installed on client
 - [Yubikey Manager](https://github.com/Yubico/yubikey-manager) (CLI) installed on client. 
 
-**NOTE**: Refer to [swjm.blog](https://swjm.blog) for _detailed_ setup instructions.
+**NOTE**: The installation and configuration of these items are _detailed_ in the next section.
+
+## ⚙️ Installation & Configuration
 
 
 ## 📖 Usage
