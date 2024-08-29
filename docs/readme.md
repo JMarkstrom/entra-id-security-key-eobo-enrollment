@@ -1,4 +1,4 @@
-[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/) 
+[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
 
 # 💾 Setup intructions
 _The following sections cover setup instructions for the script._
