@@ -59,6 +59,13 @@ _Grant admin consent to the application:_
 4. Click **Grant admin consent** and then authenticate as prompted
 5. Click **Accept** to confirm permissions assignment to the application.
 
+### Obtain the Entra ID tenant name
+_Obtain the tenant name:_
+
+1. Open a browser and navigate to the [**Microsoft Entra admin center**](https://entra.microsoft.com/)
+2. Expand **Identity** (left) and select **Overview**
+3. Note down the value of "Primary domain".
+
 ## Download and configure the script files
 _Download script and supporting configuration items:_
 
