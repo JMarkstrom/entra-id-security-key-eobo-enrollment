@@ -44,6 +44,8 @@
 # POSSIBILITY OF SUCH DAMAGE.
 ######################################################################
 
+# TODO: update API endpoints from beta to v1.0 endpoint when GA.
+
 # Standard Library Imports
 import base64
 import datetime
@@ -574,7 +576,6 @@ def yubikey_eob_registration(config):
         headers = set_http_headers(access_token)
         params = {"challenge_timeout": 5}  # Five minute timeout
 
-        # TODO: update from beta to v1.0 endpoint when GA.
 
         fido_credentials_endpoint = (
             "https://graph.microsoft.com/beta/users/"
@@ -708,7 +709,7 @@ def yubikey_eob_registration(config):
         headers = set_http_headers(access_token)
 
         fido_credentials_endpoint = (
-            "https://graph.microsoft.com/v1.0/users/"
+            "https://graph.microsoft.com/beta/users/"
             + user_name
             + "/authentication/fido2Methods"
         )
@@ -813,7 +814,7 @@ def yubikey_eob_registration(config):
             headers = set_http_headers(access_token)
             params = {"$select": "id,userPrincipalName,displayName"}
             user_endpoint = (
-                "https://graph.microsoft.com/v1.0/users/" + user_principal_name + "/"
+                "https://graph.microsoft.com/beta/users/" + user_principal_name + "/"
             )
 
             response = requests.get(
