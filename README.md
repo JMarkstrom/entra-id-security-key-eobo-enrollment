@@ -47,7 +47,7 @@ The script will outout a file on working directory called `output.json`.
 
 Here is an example: 
 
-```bash
+```json
 [
     [
         {
