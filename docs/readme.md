@@ -1,4 +1,5 @@
 [🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
+
 ![](/images/security-key-eobo-with-microsoft-entra-id-integration-overview-diagram.png)
 
 # 💾 Setup intructions
