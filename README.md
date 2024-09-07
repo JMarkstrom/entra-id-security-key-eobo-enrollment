@@ -27,7 +27,7 @@ The script is based on **Yubico** proof-of-concept found [here](https://github.c
 
 ```python
 # Set variable to control PIN length
-pin_length = 4
+pin_length = 6
 
 ```
 
