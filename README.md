@@ -3,7 +3,7 @@
 ![](/images/security-key-eobo-with-microsoft-entra-id-integration-overview-diagram.png)
 
 ## ℹ️ About
-This repository presents a Python script (`sk-entra-id.py`) that facilitates configuration of a YubiKey as well as its assignment to a user in Microsoft **Entra ID**. 
+This repository presents an _example_ Python script (`sk-entra-id.py`) that facilitates configuration of a YubiKey as well as its assignment to a user in Microsoft **Entra ID**. 
 The script is based on a **Yubico** Proof-of-Concept found [here](https://github.com/YubicoLabs/entraId-register-passkeys-on-behalf-of-users) and performs the following configuration tasks:
 
 ### Script feature summary
