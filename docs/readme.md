@@ -1,7 +1,8 @@
 [🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
 
 # 💾 Setup intructions
-_The following sections cover setup instructions for the script._
+
+![](/images/security-key-eobo-with-microsoft-entra-id-integration-overview-diagram.png)
 
 ### Table of Contents  
 [Install Python](#install-python)  
