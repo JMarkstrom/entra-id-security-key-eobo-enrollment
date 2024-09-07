@@ -11,7 +11,7 @@ _The following sections cover setup instructions for the script._
 [Configure Microsoft Entra ID tenant](#configure-microsoft-entraid-tenant)  
 [Download and configure the script files](#download-and-configure-the-script-files)
 
-## Install Pyhton
+## Install Python
 _The following assumes the target OS is Windows:_
 
 1. Download the Python installer [here](https://www.python.org/downloads/windows/)
