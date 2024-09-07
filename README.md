@@ -39,7 +39,7 @@ To install dependencies and configure your Entra ID tenant please follow instruc
 ## 📖 Usage
 To run the script, simply execute command: `python sk-entra-id.py`
 
-![](/images/security-key-eobo-with-microsoft-entra-id.1.2.gif | width=800)
+![](/images/security-key-eobo-with-microsoft-entra-id.1.2.gif)
 
 
 ## 🗎 Results
