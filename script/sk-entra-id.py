@@ -725,10 +725,8 @@ def yubikey_eob_registration(config):
                     base64.b64decode(str(client_extensions)).decode("utf-8")
                 ),
             },
-            "displayName": "Serial: "
-            + str(serial_number)
-            + " "
-            + str(datetime.date.today()),
+            "displayName": "YubiKey with S/N: "
+            + str(serial_number),
         }
 
         response = requests.post(
