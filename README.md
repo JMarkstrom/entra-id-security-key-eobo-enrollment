@@ -16,12 +16,21 @@ The script is based on **Yubico** proof-of-concept found [here](https://github.c
 |:------------- |:-------------|:-----|
 | User gestures | _The script will prompt for necessary interactions (remove, insert, touch)._     |    |
 | Reset YubiKey    | _The YubiKey is factory reset prior to configuration._ |  |
-| Set random PIN    | _A random non-trivial PIN is set on the YubiKey._      |_Configurable_ |
+| Set random PIN    | _A random non-trivial PIN* is set on the YubiKey._      |_Configurable_ |
 | Enroll passkey    | _A FIDO2 credential is created on-behalf-of the user._      |    |
 | Force PIN change | _The configured PIN must be changed by the end-user._     |   FW ```5.7``` _or later_|
 | Restrict NFC | _NFC access to the YubiKey is limited until first use._     |   FW ```5.7``` _or later_ |
 | Prompt next user | _On successful configuration the script will prompt to continue._     |    |
 | Save to file | _All relevant configuration items are saved to a JSON output file._     |    |
+
+*PIN is set to ```4``` characters. If you are programming _Enterprise Edition_ Security Keys you will need to set it to ```6```
+
+```python
+# Set variable to control PIN length
+pin_length = 4
+
+```
+
 
 ⚠️ This script is provided "as-is" without any warranty of any kind, either expressed or implied.
 
