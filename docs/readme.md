@@ -1,6 +1,8 @@
-[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
+# FIDO2 Enrollment On-Behalf-Of for Microsoft Entra ID 
 
 ![](/images/security-key-eobo-with-microsoft-entra-id-integration-overview-diagram.png)
+
+[🔙](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main) 
 
 # 💾 Setup intructions
 _The following sections cover setup instructions for the script._
