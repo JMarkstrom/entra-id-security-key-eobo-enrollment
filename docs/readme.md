@@ -3,6 +3,14 @@
 # 💾 Setup intructions
 _The following sections cover setup instructions for the script._
 
+### Table of Contents  
+[Install Python](#install-python)  
+[Install Requests](#install-requests)  
+[Install Python-fido2](#install-python-fido2)  
+[Install YubiKey Manager CLI](#install-yubikey-managercli)  
+[Configure Microsoft Entra ID tenant](#configure-microsoft-entraid-tenant)  
+[Download and configure the script files](#download-and-configure-the-script-files)
+
 ## Install Pyhton
 _The following assumes the target OS is Windows:_
 
