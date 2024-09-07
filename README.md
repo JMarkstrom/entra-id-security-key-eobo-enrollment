@@ -26,15 +26,6 @@ The script is based on **Yubico** proof-of-concept found [here](https://github.c
 ⚠️ This script is provided "as-is" without any warranty of any kind, either expressed or implied.
 
 
-## 💻 Prerequisites
-_The following are prerequisites towards running the script:_
-
-- Microsoft Entra ID app registration
-- [Python](https://www.python.org/downloads/) installed on client
-- [Requests](https://github.com/psf/requests) installed on client
-- [Python-fido2](https://github.com/Yubico/python-fido2) installed on client
-- [Yubikey Manager](https://github.com/Yubico/yubikey-manager) (CLI) installed on client. 
-
 ## 💾 Setup intructions
 To install dependencies and configure your Entra ID tenant please see [these](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main/docs) instructions.
 
