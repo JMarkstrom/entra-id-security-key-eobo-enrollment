@@ -42,7 +42,7 @@ To run the script, simply execute command: `python sk-entra-id.py`
 ![](/images/security-key-eobo-with-microsoft-entra-id.1.2.gif)
 
 
-## 🗎 The output.json file
+## 🗎 Results
 The script will outout a file on working directory called `output.json`. 
 
 Here is an example: 
@@ -73,6 +73,11 @@ Here is an example:
     ]
 ]
 ```
+
+In Microsoft Entra ID the registered security key will appear with it's associated Serial Number:
+
+![](/images/security-key-eobo-with-microsoft-entra-id-added-to-account)
+
 
 ## 📖 Roadmap
 Possible improvements includes:
