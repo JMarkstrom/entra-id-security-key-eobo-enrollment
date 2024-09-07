@@ -38,7 +38,7 @@ The user acknowledges that, as of the date of publication (H2 2024), the feature
 
 
 ## 💾 Setup intructions
-To install dependencies and configure your Entra ID tenant please see [these](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main/docs) instructions.
+To install dependencies and configure your Entra ID tenant please follow instructions [here](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main/docs).
 
 ## 📖 Usage
 To run the script, simply execute command: `python sk-entra-id.py`
