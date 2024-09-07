@@ -75,7 +75,6 @@ Possible improvements includes:
 - ~~Handle missing Serial Number (on 'Security Key Series' YubiKey)~~
 - Extend an existing output file and handle duplicates
 - Offer choice of `.json` _or_ `.csv` as output file format
-- Optional programming by security group membership
 
 ## 🥷🏻 Contributing
 Any help on the above (see 'roadmap) is welcome.
