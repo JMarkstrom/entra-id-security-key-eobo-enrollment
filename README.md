@@ -31,8 +31,10 @@ pin_length = 6
 
 ```
 
+## ⚠️ Disclaimer
+The script provided herein is made available on an "as-is" basis, without any warranties or representations, whether express, implied, or statutory, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
 
-⚠️ This script is provided "as-is" without any warranty of any kind, either expressed or implied.
+The user acknowledges that, as of the date of publication (H2 2024), the features upon which this script relies are in a Preview phase as provided by Microsoft. As such, these features are subject to change, modification, or discontinuation at any time without notice and may be unsupported. The user assumes all risks associated with the use of the script and the underlying features. The provider of this script disclaims any liability for damages, losses, or other claims arising from or in connection with the use or reliance on this script.
 
 
 ## 💾 Setup intructions
