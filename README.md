@@ -78,8 +78,6 @@ Here is an example:
 
 ## 📖 Roadmap
 Possible improvements includes:
-- ~~Enable "Secure Transport Mode" (Restricted NFC) on supported YubiKeys~~
-- ~~Handle missing Serial Number (on 'Security Key Series' YubiKey)~~
 - Extend an existing output file and handle duplicates
 - Offer choice of `.json` _or_ `.csv` as output file format
 
@@ -87,7 +85,4 @@ Possible improvements includes:
 Any help on the above (see 'roadmap) is welcome.
 
 ## 📜 Release History
-* 2024.08.17 `v1.3` Handle missing Serial Number
-* 2024.07.11 `v1.2` Support for [Restricted NFC](https://docs.yubico.com/hardware/yubikey/yk-tech-manual/5.7-firmware-specifics.html#restricted-nfc) 
-* 2024.06.15 `v1.1` Updated Graph API endpoints
-* 2024.05.04 `v1.0` First release
+* 2024.08.17 `v1.3`
