@@ -41,8 +41,6 @@ To run the script, simply execute command: `python sk-entra-id.py`
 
 ![](/images/security-key-eobo-with-microsoft-entra-id.1.2.gif)
 
-**NOTE**: Refer to [swjm.blog](https://swjm.blog) for _detailed_ usage instructions.
-
 
 ## 🗎 The output.json file
 The script will outout a file on working directory called `output.json`. 
