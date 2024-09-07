@@ -59,19 +59,7 @@ Here is an example:
             "PIN change required": false
             "Secure Transport Mode": false
         }
-    ],
-    [
-        {
-            "Name": "Mike Smith",
-            "UPN": "mike@swjm.blog",
-            "Model": "YubiKey 5C NFC",
-            "Serial number": 87654321,
-            "PIN": "6855",
-            "PIN change required": true
-            "Secure Transport Mode": true
-        }
     ]
-]
 ```
 
 In Microsoft Entra ID the registered security key will appear with it's associated Serial Number:
