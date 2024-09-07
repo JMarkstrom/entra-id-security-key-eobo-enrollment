@@ -76,7 +76,7 @@ Here is an example:
 
 In Microsoft Entra ID the registered security key will appear with it's associated Serial Number:
 
-![](/images/security-key-eobo-with-microsoft-entra-id-added-to-account)
+![](/images/security-key-eobo-with-microsoft-entra-id-added-to-account.png)
 
 
 ## 📖 Roadmap
