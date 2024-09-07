@@ -82,7 +82,7 @@ Here is an example:
 
 ## 📖 Roadmap
 Possible improvements includes:
-- ~~Enable "Secure Transport Mode" (restricted NFC) on supported YubiKeys~~
+- ~~Enable "Secure Transport Mode" (Restricted NFC) on supported YubiKeys~~
 - ~~Handle missing Serial Number (on 'Security Key Series' YubiKey)~~
 - Extend an existing output file and handle duplicates
 - Offer choice of `.json` _or_ `.csv` as output file format
