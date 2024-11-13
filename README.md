@@ -59,7 +59,7 @@ Here is an example:
             "PIN change required": false
             "Secure Transport Mode": false
         }
-    ]
+]
 ```
 
 In Microsoft Entra ID the registered security key will appear with it's associated Serial Number:
