@@ -67,13 +67,5 @@ In Microsoft Entra ID the registered security key will appear with it's associat
 ![](/images/security-key-eobo-with-microsoft-entra-id-added-to-account.png)
 
 
-## 📖 Roadmap
-Possible improvements includes:
-- Extend an existing output file and handle duplicates
-- Offer choice of `.json` _or_ `.csv` as output file format
-
-## 🥷🏻 Contributing
-Any help on the above (see 'roadmap) is welcome.
-
 ## 📜 Release History
 * 2024.08.17 `v1.3`
