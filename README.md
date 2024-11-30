@@ -14,6 +14,7 @@ The script is based on a **Yubico** Proof-of-Concept found [here](https://github
 | Reset YubiKey    | _The YubiKey is factory reset prior to configuration._ |  |
 | Set random PIN    | _A random non-trivial PIN* is set on the YubiKey._      |_Configurable_ |
 | Enroll passkey    | _A FIDO2 credential is created on-behalf-of the user._      |    |
+| Set minimum PIN length | _Any new PIN must comply with length requirement._     |   FW ```5.7``` _or later_|
 | Force PIN change | _The configured PIN must be changed by the end-user._     |   FW ```5.7``` _or later_|
 | Restrict NFC | _NFC access to the YubiKey is limited until first use._     |   FW ```5.7``` _or later_ |
 | Prompt next user | _On successful configuration the script will prompt to continue._     |    |
