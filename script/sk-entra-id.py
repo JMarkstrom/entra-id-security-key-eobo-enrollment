@@ -1,8 +1,8 @@
 ######################################################################
 # Security Key Enrollment-On-Behalf-Of (EOBO) for Microsoft Entra ID                   
 ######################################################################
-# version: 1.3
-# last updated on: 2024-08-17 by Jonas Markström (swjm.blog)
+# version: 1.4
+# last updated on: 2024-11-30 by Jonas Markström (swjm.blog)
 # see readme.md for more info.
 #
 # DEPENDENCIES: 
@@ -93,7 +93,7 @@ def banner():
     click.secho("▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ")
     click.secho("▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ")
-    click.secho("▒░░░░░░░░░░░░░▒░█▀▀░█▀▀░█▀▀░█░█░█▀▄░▀█▀░▀█▀░█░█░░░█░█░█▀▀░█░█░░░█▀▀░█▀█░█▀▄░█▀█░v.1.3░░░░▒  ")
+    click.secho("▒░░░░░░░░░░░░░▒░█▀▀░█▀▀░█▀▀░█░█░█▀▄░▀█▀░▀█▀░█░█░░░█░█░█▀▀░█░█░░░█▀▀░█▀█░█▀▄░█▀█░v.1.4░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░▒░▀▀█░█▀▀░█░░░█░█░█▀▄░░█░░░█░░░█░░░░█▀▄░█▀▀░░█░░░░█▀▀░█░█░█▀▄░█░█░░░░░░░░░░▒  ")
     click.secho("▒░░░░░░░▒▒▒▒▒░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░░▀░░░▀░░░░▀░▀░▀▀▀░░▀░░░░▀▀▀░▀▀▀░▀▀░░▀▀▀░░░░░░░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ")
@@ -952,7 +952,7 @@ def yubikey_eob_registration(config):
     )
 
     
-    # Force PIN change
+    # Force PIN change & set Minimum PIN lenght
     banner()
     pin_change = False
     nfc_restricted = False
@@ -968,7 +968,9 @@ def yubikey_eob_registration(config):
                 pin, ClientPin.PERMISSION.AUTHENTICATOR_CFG
             )
             config = Config(ctap, client_pin.protocol, token)
-            config.set_min_pin_length(force_change_pin=True)
+            #config.set_min_pin_length(force_change_pin=True)
+            # Set minimum PIN length and force PIN change
+            config.set_min_pin_length(min_pin_length=pin_length, force_change_pin=True)
 
             # Set attribute for JSON output file
             pin_change = True
