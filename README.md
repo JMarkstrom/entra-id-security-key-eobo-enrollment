@@ -20,7 +20,7 @@ The script is based on a **Yubico** Proof-of-Concept found [here](https://github
 | Prompt next user | _On successful configuration the script will prompt to continue._     |    |
 | Save to file | _All relevant configuration items are saved to a JSON output file._     |    |
 
-*PIN length is set to ```4```. If you are enrolling _Enterprise Edition_ Security Keys_ or if you wish to enforce longer PINs, you must adjust this value.
+*PIN length is set to ```4```. If you are enrolling _Enterprise Edition_ Security Keys _or_ if you wish to enforce longer PINs, you must adjust this value.
 
 ```python
 # Set variable to control PIN length
