@@ -44,7 +44,7 @@ To run the script, simply execute command: `python sk-entra-id.py`
 
 
 ## 🗎 Results
-The script will outout a file on working directory called `output.json`. 
+The script will output a file on working directory called `output.json`. 
 
 Here is an example: 
 
@@ -69,4 +69,5 @@ In Microsoft Entra ID the registered security key will appear with it's associat
 
 
 ## 📜 Release History
+* 2024.10.30 `v1.4`
 * 2024.08.17 `v1.3`
