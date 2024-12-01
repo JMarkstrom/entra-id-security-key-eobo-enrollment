@@ -69,5 +69,5 @@ In Microsoft Entra ID the registered security key will appear with it's associat
 
 
 ## 📜 Release History
-* 2024.10.30 `v1.4`
+* 2024.11.30 `v1.4`
 * 2024.08.17 `v1.3`
