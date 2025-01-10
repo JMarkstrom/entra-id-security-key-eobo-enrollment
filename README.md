@@ -67,6 +67,11 @@ In Microsoft Entra ID the registered security key will appear with it's associat
 
 ![](/images/security-key-eobo-with-microsoft-entra-id-added-to-account.png)
 
+## 🥷🏻 Contributing
+You can help by getting involved in the project, _or_ by donating (any amount!).   
+Donations will support costs such as domain registration and code signing (planned).
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?business=RXAPDEYENCPXS&no_recurring=1&item_name=Help+cover+costs+of+the+SWJM+blog+and+app+code+signing%2C+supporting+a+more+secure+future+for+all.&currency_code=USD)
 
 ## 📜 Release History
 * 2024.11.30 `v1.4`
