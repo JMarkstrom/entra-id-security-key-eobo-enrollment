@@ -300,12 +300,15 @@ tenant_id = config["tenant_id"]
 # Check for output file
 """
 Programmed YubiKeys will be written to an output file in CSV format.
+If the file exists, new entries will be appended. If not, a new file will be created.
 """
-# Create/open the CSV file with headers
 csv_headers = ['Name', 'UPN', 'Model', 'Serial number', 'PIN', 'PIN change required', 'Secure Transport Mode']
-with open('output.csv', 'w', newline='') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
-    writer.writeheader()
+
+# Check if file exists, if not create it with headers
+if not os.path.exists('output.csv'):
+    with open('output.csv', 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
+        writer.writeheader()
 
 
 # Disable warnings(!)
