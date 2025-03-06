@@ -66,5 +66,5 @@ Donations will support costs such as domain registration and code signing (plann
 
 ## 📜 Release History
 * 2025.03.06 `v1.5` Now outputs CSV instead of JSON
-* 2024.11.30 `v1.4` Various improvements
+* 2024.11.30 `v1.4` Misc. improvements
 * 2024.08.17 `v1.3` MVP release
