@@ -1,8 +1,8 @@
 ######################################################################
 # Security Key Enrollment-On-Behalf-Of (EOBO) for Microsoft Entra ID                   
 ######################################################################
-# version: 1.4
-# last updated on: 2024-11-30 by Jonas Markström (swjm.blog)
+# version: 1.5
+# last updated on: 2024-03-06 by Jonas Markström (swjm.blog)
 # see readme.md for more info.
 #
 # DEPENDENCIES: 
@@ -16,7 +16,7 @@
 # USAGE: python sk-entra-id.py
 #
 # BSD 2-Clause License                                                             
-# Copyright (c) 2024, swjm.blog
+# Copyright (c) 2025, swjm.blog
 # Copyright (c) 2024, Yubico AB
 #
 #   Redistribution and use in source and binary forms, with or
@@ -70,6 +70,7 @@ from fido2.ctap2.pin import ClientPin
 from fido2.hid import CtapHidDevice
 from fido2.utils import websafe_encode
 import string
+import csv
 
 # Local Imports
 from ykman import scripting as s
@@ -93,7 +94,7 @@ def banner():
     click.secho("▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ▒░░░░░░░▒▒▒▒░░░░░░░░▒  ")
     click.secho("▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ▒░░░░░░░▒  ▒░░░░░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ")
-    click.secho("▒░░░░░░░░░░░░░▒░█▀▀░█▀▀░█▀▀░█░█░█▀▄░▀█▀░▀█▀░█░█░░░█░█░█▀▀░█░█░░░█▀▀░█▀█░█▀▄░█▀█░v.1.4░░░░▒  ")
+    click.secho("▒░░░░░░░░░░░░░▒░█▀▀░█▀▀░█▀▀░█░█░█▀▄░▀█▀░▀█▀░█░█░░░█░█░█▀▀░█░█░░░█▀▀░█▀█░█▀▄░█▀█░v.1.5░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░▒░▀▀█░█▀▀░█░░░█░█░█▀▄░░█░░░█░░░█░░░░█▀▄░█▀▀░░█░░░░█▀▀░█░█░█▀▄░█░█░░░░░░░░░░▒  ")
     click.secho("▒░░░░░░░▒▒▒▒▒░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░░▀░░░▀░░░░▀░▀░▀▀▀░░▀░░░░▀▀▀░▀▀▀░▀▀░░▀▀▀░░░░░░░░░░▒  ")
     click.secho("▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ▒░░░░░░░░░░░░░░░░░░░▒  ")
@@ -298,13 +299,13 @@ tenant_id = config["tenant_id"]
 
 # Check for output file
 """
-Programmed YubiKeys will be written to an output file.
+Programmed YubiKeys will be written to an output file in CSV format.
 """
-# Initialize output data as an empty list
-data = []
-# Create the output file
-with open("output.json", "w") as jsonfile:
-    json.dump(data, jsonfile)
+# Create/open the CSV file with headers
+csv_headers = ['Name', 'UPN', 'Model', 'Serial number', 'PIN', 'PIN change required', 'Secure Transport Mode']
+with open('output.csv', 'w', newline='') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
+    writer.writeheader()
 
 
 # Disable warnings(!)
@@ -320,29 +321,22 @@ access_token = get_access_token_for_microsoft_graph(client_id, client_secret, te
 def yubikey_eob_registration(config):
 
     # Function to write configuration of YubiKey to file
-    def write_json():
+    def write_csv():
         """
-        Writes programmed YubiKey information to a JSON file.
-        The modified data is written to the 'output.json' file.
+        Writes programmed YubiKey information to a CSV file.
+        The data is appended to the 'output.csv' file.
         """
-        new_data = []
-        # Add programmed YubiKey information to JSON data
-        new_data.append(
-            {
-                "Name": user_display_name,
-                "UPN": user_name,
-                "Model": device.name,
-                "Serial number": serial_number,
-                "PIN": pin,
-                "PIN change required": pin_change,
-                "Secure Transport Mode": nfc_restricted
-            }
-        )
-        data.append(new_data)
-
-        # Write the modified data back to the JSON file
-        with open("output.json", "w") as jsonfile:
-            json.dump(data, jsonfile, indent=4)
+        with open('output.csv', 'a', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
+            writer.writerow({
+                'Name': user_display_name,
+                'UPN': user_name,
+                'Model': device.name,
+                'Serial number': serial_number,
+                'PIN': pin,
+                'PIN change required': pin_change,
+                'Secure Transport Mode': nfc_restricted
+            })
 
     
     # Function to prompt user for touching the YubiKey
@@ -853,29 +847,27 @@ def yubikey_eob_registration(config):
         return serial_number
 
 
-    # Function to check if the serial number is already in the JSON file
+    # Function to check if the serial number is already in the CSV file
     def is_serial_number_in_file(serial_number):
         """
-        Check if a serial number is present in the 'output.json' file.
+        Check if a serial number is present in the 'output.csv' file.
 
         This function helps avoid programming errors where a user attempts to program a YubiKey that has
-        already been programmed. It searches the 'output.json' file for the provided serial number and
+        already been programmed. It searches the 'output.csv' file for the provided serial number and
         returns True if the serial number is found, False otherwise.
 
         Args:
-            serial_number (str): The serial number to search for in the 'output.json' file.
+            serial_number (str): The serial number to search for in the 'output.csv' file.
 
         Returns:
             bool: True if the serial number is found in the file, False otherwise.
         """
         try:
-            with open("output.json", "r") as jsonfile:
-                data = json.load(jsonfile)
-                for entry in data:
-            
-                    for item in entry:
-                        if item.get("Serial number") == serial_number:
-                            return True
+            with open('output.csv', 'r', newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    if row['Serial number'] == str(serial_number):
+                        return True
         except FileNotFoundError:
             return False
         return False
@@ -884,7 +876,7 @@ def yubikey_eob_registration(config):
     while True:
         serial_number = read_serial_number()
         if is_serial_number_in_file(serial_number):
-            # If the serial number exists in the output.json file, inform the user
+            # If the serial number exists in the output.csv file, inform the user
             banner()
             click.pause(
                 "Insert a new YubiKey and press any key to continue..."
@@ -972,7 +964,7 @@ def yubikey_eob_registration(config):
             # Set minimum PIN length and force PIN change
             config.set_min_pin_length(min_pin_length=pin_length, force_change_pin=True)
 
-            # Set attribute for JSON output file
+            # Set attribute for CSV output file
             pin_change = True
             banner()
             click.pause(
@@ -990,7 +982,7 @@ def yubikey_eob_registration(config):
             lock_code = None
             
             session.write_device_config(config, False, lock_code)
-            # Set attribute for JSON output file
+            # Set attribute for CSV output file
             nfc_restricted = True
             banner()
             click.pause(
@@ -998,8 +990,8 @@ def yubikey_eob_registration(config):
                 )
 
 
-    # Write JSON output file containing relevant attributes
-    write_json()
+    # Write CSV output file containing relevant attributes
+    write_csv()
 
     # Inform user on completion
     banner()
