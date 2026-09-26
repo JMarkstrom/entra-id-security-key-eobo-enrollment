@@ -68,3 +68,10 @@ Donations will support costs such as domain registration and code signing (plann
 * 2025.03.06 `v1.5` Now outputs CSV instead of JSON
 * 2024.11.30 `v1.4` Misc. improvements
 * 2024.08.17 `v1.3` MVP release
+
+## ™️ Trademark notice
+YubiKey is a trademark of Yubico. This project is independent of and is not affiliated with, endorsed by, or sponsored by Yubico.
+
+## ⚖️ License
+This software is proprietary. Copyright (c) 2026 swjm.blog. All rights reserved. See [LICENSE](LICENSE) for details.
+
