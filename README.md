@@ -29,10 +29,7 @@ pin_length = 4
 ```
 
 ## ⚠️ Disclaimer
-The script provided herein is made available on an "as-is" basis, without any warranties or representations, whether express, implied, or statutory, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
-
-The user acknowledges that, as of the date of publication (H2 2024), the features upon which this script relies are in a Preview phase as provided by Microsoft. As such, these features are subject to change, modification, or discontinuation at any time without notice and may be unsupported. The user assumes all risks associated with the use of the script and the underlying features. The provider of this script disclaims any liability for damages, losses, or other claims arising from or in connection with the use or reliance on this script.
-
+This application is provided on an “AS IS” basis, without warranties or representations of any kind. For the complete warranty disclaimer and terms governing use, modification, and redistribution, see the [BSD-2-Clause License](LICENSE).
 
 ## 💾 Setup intructions
 To install dependencies and configure your Entra ID tenant please follow instructions [here](https://github.com/JMarkstrom/entra-id-security-key-obo-enrollment/tree/main/docs).
@@ -73,5 +70,7 @@ Donations will support costs such as domain registration and code signing (plann
 YubiKey is a trademark of Yubico. This project is independent of and is not affiliated with, endorsed by, or sponsored by Yubico.
 
 ## ⚖️ License
-This software is proprietary. Copyright (c) 2026 swjm.blog. All rights reserved. See [LICENSE](LICENSE) for details.
+This software is licensed under the [BSD-2-Clause License](LICENSE).   
+Copyright (c) 2026 swjm.blog.
+
 
